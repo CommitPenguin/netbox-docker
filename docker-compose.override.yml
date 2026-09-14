@@ -1,0 +1,12 @@
+services:
+  netbox:
+    ports:
+      - "8000:8080"
+    environment:
+      SKIP_SUPERUSER: "false"
+      SUPERUSER_NAME: "admin"
+      SUPERUSER_EMAIL: "maren@home.lan"
+      SUPERUSER_PASSWORD: "netbox-admin-2026"
+      # used by the CI inventory jobs (Authorization: Bearer nbt_<key>.<token>)
+      SUPERUSER_API_KEY: "ci7Kq2ZpW4xN"
+      SUPERUSER_API_TOKEN: "Rb3hV9tLm2QwX8sKp4ZcY7nJd1FgE6aUo5HiT0yM"
