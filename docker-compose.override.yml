@@ -10,3 +10,7 @@ services:
       # used by the CI inventory jobs (Authorization: Bearer nbt_<key>.<token>)
       SUPERUSER_API_KEY: "ci7Kq2ZpW4xN"
       SUPERUSER_API_TOKEN: "Rb3hV9tLm2QwX8sKp4ZcY7nJd1FgE6aUo5HiT0yM"
+      # postgres ran out of connections ("too many clients") after 5.1.1,
+      # granian was spawning way too many threads. cap it.
+      GRANIAN_WORKERS: "2"
+      GRANIAN_BLOCKING_THREADS: "8"
